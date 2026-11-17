@@ -1,3 +1,6 @@
 target
 Cargo.lock
 .idea
+
+# Generated third-party licenses file
+licenses/third-party-licenses.md

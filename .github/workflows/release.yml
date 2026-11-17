@@ -63,6 +63,17 @@ jobs:
     runs-on: ubuntu-26.04
 
     steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install cargo-about
+        run: cargo install cargo-about --features cli
+
+      - name: Generate third-party licenses
+        run: cargo about generate licenses/ -n third-party -o third-party-licenses.md
+
       - name: Download artifacts
         uses: actions/download-artifact@v8
         with:
@@ -76,5 +87,6 @@ jobs:
             artifacts/gmsv_exporter_linux64.dll/gmsv_exporter_linux64.dll
             artifacts/gmsv_exporter_win32.dll/gmsv_exporter_win32.dll
             artifacts/gmsv_exporter_win64.dll/gmsv_exporter_win64.dll
+            third-party-licenses.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
