@@ -1,6 +1,6 @@
 # gmsv-exporter
 
-![Stars + License](https://shieldcn.dev/group/github/license/Austria7/gmsv_exporter+github/stars/Austria7/gmsv_exporter+github/forks/Austria7/gmsv_exporter.svg?variant=branded)
+![Stars + License](https://shieldcn.dev/group/github/license/Austria7/gmsv-exporter+github/stars/Austria7/gmsv-exporter+github/forks/Austria7/gmsv-exporter.svg?variant=branded)
 
 Exposes a [Prometheus](https://prometheus.io/) metrics API to Garry's Mod Lua scripts.
 
